@@ -1,0 +1,73 @@
+﻿<Window x:Class="Fund.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fund"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="510" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="190"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Введите дату поступления книги" FontSize="20"/>
+        <TextBlock Grid.Row="2" Text="Жанр произведения" FontSize="20"/>
+        <TextBlock Grid.Row="4" Text="Имя автора" FontSize="20"/>
+        <TextBlock Grid.Row="6" Text="Название книги" FontSize="20"/>
+        <TextBlock Grid.Row="8" Text="Год издания" FontSize="20"/>
+        <TextBlock Grid.Row="10" Text="Обязательное обучение" FontSize="20"/>
+
+        <DatePicker Name="StartPic" Grid.Column="2"  Margin="40 0 40 0"/>
+
+        <ComboBox Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="2" Name="GenreCmb" Margin="40 0 100 0" SelectionChanged="GenreCmb_SelectionChanged"/>
+
+        <TextBox Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2" Name="AuthorTb" Margin="40 0 100 0"/>
+
+        <TextBox Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="2" Name="TitleTb" Margin="40 0 100 0"/>
+
+        <TextBox Grid.Row="8" Grid.ColumnSpan="2" Grid.Column="2" Name="YearTb" Margin="40 0 100 0"/>
+
+        <CheckBox Grid.Row="10" Grid.ColumnSpan="2" Grid.Column="2" Name="EductCb" Margin="40 0 100 0"/>
+
+        <Button FontSize="20" Grid.Row="14" Grid.Column="3" Name="AddBtn" Content="Добавить" Margin="40 0 40 0" Click="AddBtn_Click"/>
+
+        <DataGrid Name="BooksDG" Grid.Row="12" Grid.ColumnSpan="4" AutoGenerateColumns="False" Loaded="BooksDG_Loaded" FontSize="20" Margin="10 0 10 0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата поступления" Width="120"
+                                Binding="{Binding DateOfReceipt, StringFormat=dd/MM/yyyy}"/>
+                <DataGridTextColumn Header="Жанр" Width="60"
+                                Binding="{Binding Genres.GenreName}"/>
+                <DataGridTextColumn Header="Имя автора" Width="60"
+                                Binding="{Binding AuthorName}"/>
+                <DataGridTextColumn Header="Название книги" Width="60"
+                                Binding="{Binding BookTitle}"/>
+                <DataGridTextColumn Header="Год издания" Width="60"
+                                Binding="{Binding PublicationYear}"/>
+                <DataGridCheckBoxColumn Header="Обязательное обучение" Width="250"
+                                Binding="{Binding IsInMandatoryReadingList}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        </Grid>
+</Window>

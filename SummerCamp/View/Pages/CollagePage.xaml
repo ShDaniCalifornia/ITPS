@@ -1,0 +1,17 @@
+﻿<Page x:Class="SummerCamp.View.Pages.CollagePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SummerCamp.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="520" d:DesignWidth="500"
+      Title="CollagePage">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Stretch">
+            <Image Source="/Resource/13.jpg" />
+            <Image Source="/Resource/5.jpg" />
+        </StackPanel>
+    </Grid>
+</Page>

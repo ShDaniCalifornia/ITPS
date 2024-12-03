@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Frame4.Class
 {
@@ -12,6 +7,6 @@ namespace Frame4.Class
         static public Frame FrameMenu;
         static public Frame FrameBody;
         static public Frame FrameLogo;
-        static public Frame FrameAccounting;
+        static public Frame FrameTitle;
     }
 }

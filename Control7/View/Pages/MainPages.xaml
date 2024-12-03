@@ -1,0 +1,24 @@
+﻿<Page x:Class="Control7.View.Pages.MainPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control7.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="MainPages">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="333"/>
+            <RowDefinition Height="333"/>
+            <RowDefinition Height="333"/>
+        </Grid.RowDefinitions>
+        
+       <Image Grid.RowSpan="3" Source="/Resource/5f979872-6b61-4377-a8bc-58c5eccb86e0.jpg" Stretch="Fill" />
+        
+        <TextBlock Text="Салон красоты" FontSize="60" Margin="100 240 10 10" Foreground="Purple"/>
+        <TextBlock Grid.Row="1" Text="Перезагрузка" FontSize="80" Margin="150 0 10 10" Foreground="Purple"/>
+
+        
+    </Grid>
+</Page>

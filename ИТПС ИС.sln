@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Control7", "Control7", "{00
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control7", "Control7\Control7.csproj", "{86530449-C36C-42AE-8420-BD760FD8DDF3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pharmacy", "Pharmacy", "{CADE3D65-6576-4FA4-8AB6-C2ECA7CF0F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy", "Pharmacy\Pharmacy.csproj", "{32B05FE1-4656-4D4A-80D9-126FE529123F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{86530449-C36C-42AE-8420-BD760FD8DDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86530449-C36C-42AE-8420-BD760FD8DDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86530449-C36C-42AE-8420-BD760FD8DDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B05FE1-4656-4D4A-80D9-126FE529123F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B05FE1-4656-4D4A-80D9-126FE529123F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B05FE1-4656-4D4A-80D9-126FE529123F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B05FE1-4656-4D4A-80D9-126FE529123F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{CC9BCB6D-B1D7-4B14-8ED2-707ECB9743DD} = {8EC55EE3-6E0B-4673-9470-A7F219A2DCD9}
 		{14AFFBF1-99A2-4FB6-A1C6-20132A2759CB} = {F07CB6ED-9313-4867-9EA3-3C5A08A0BE77}
 		{86530449-C36C-42AE-8420-BD760FD8DDF3} = {0065DF23-1ED8-49B2-8806-92ABBB79CE0D}
+		{32B05FE1-4656-4D4A-80D9-126FE529123F} = {CADE3D65-6576-4FA4-8AB6-C2ECA7CF0F81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4D5FF74-0905-4D7E-9BC8-79065DCAF82D}

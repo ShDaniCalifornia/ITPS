@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86530449-C36C-42AE-8420-BD760FD8DDF3}</ProjectGuid>
+    <ProjectGuid>{32B05FE1-4656-4D4A-80D9-126FE529123F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Control7</RootNamespace>
-    <AssemblyName>Control7</AssemblyName>
+    <RootNamespace>Pharmacy</RootNamespace>
+    <AssemblyName>Pharmacy</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -64,43 +64,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppData\ClassFrame.cs" />
-    <Compile Include="View\Pages\AddEmployeePages.xaml.cs">
-      <DependentUpon>AddEmployeePages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\AddManufacturerPages.xaml.cs">
-      <DependentUpon>AddManufacturerPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\AddProductPages.xaml.cs">
-      <DependentUpon>AddProductPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\MainPages.xaml.cs">
-      <DependentUpon>MainPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\PanelPages.xaml.cs">
-      <DependentUpon>PanelPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\RecordsPages.xaml.cs">
-      <DependentUpon>RecordsPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Pages\ReportPages.xaml.cs">
-      <DependentUpon>ReportPages.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Windows\MainWindow.xaml.cs">
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Acounting.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Employee.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Manufacturer.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -156,56 +133,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
       <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resource\5f979872-6b61-4377-a8bc-58c5eccb86e0.jpg" />
-    <Resource Include="Resource\3443eea4-acd4-4eff-bec0-fefa5b50ad36.jpg" />
-    <Resource Include="Resource\8cf12a6a-8860-4c9d-bfb7-0c40a5374a88.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="View\Pages\AddEmployeePages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\AddManufacturerPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\AddProductPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\MainPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\PanelPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\RecordsPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Pages\ReportPages.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Windows\MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

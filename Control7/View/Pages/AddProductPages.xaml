@@ -1,0 +1,36 @@
+﻿<Page x:Class="Control7.View.Pages.AddProductPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control7.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="AddProductPages">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="140"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.RowSpan="10" Source="/Resource/5f979872-6b61-4377-a8bc-58c5eccb86e0.jpg" Stretch="Fill" />
+
+        <TextBlock Grid.Row="1" Text="Введите товар" FontSize="40" Margin="180 30 0 0" VerticalAlignment="Bottom"/>
+
+        <TextBox Grid.Row="3" Margin="100 20 400 20" Name="ProductTb"/>
+
+        <TextBlock Grid.Row="5" Text="Выберите производителя товара" FontSize="40" Margin="20 30 0 0" VerticalAlignment="Bottom"/>
+
+        <ComboBox Grid.Row="7" Margin="100 20 400 20" Name="ManufacturerCmb"/>
+
+        <Button Grid.Row="10" Margin="200 20 500 20" Name="AddProductBtn" Content="Добавить" FontSize="30" Click="AddProductBtn_Click"/>
+    </Grid>
+</Page>

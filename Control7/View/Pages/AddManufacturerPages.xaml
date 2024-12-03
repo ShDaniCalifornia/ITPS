@@ -1,0 +1,29 @@
+﻿<Page x:Class="Control7.View.Pages.AddManufacturerPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control7.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="AddManufacturerPages">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="270"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.RowSpan="7" Source="/Resource/5f979872-6b61-4377-a8bc-58c5eccb86e0.jpg" Stretch="Fill" />
+
+        <TextBlock Grid.Row="1" Text="Введите производителя" FontSize="50" Margin="90 30 0 0" />
+
+        <TextBox Grid.Row="3" Margin="100 20 400 20" Name="ManufacturerTb"/>
+
+        <Button Grid.Row="5" Margin="200 20 500 20" Name="AddManufacturerBtn" Content="Добавить" FontSize="30" Click="AddManufacturerBtn_Click"/>
+    </Grid>
+</Page>

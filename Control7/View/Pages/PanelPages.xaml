@@ -1,0 +1,39 @@
+﻿<Page x:Class="Control7.View.Pages.PanelPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control7.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="300"
+      Title="PanelPages">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="240"/>
+        </Grid.RowDefinitions>
+        
+        <Image Grid.RowSpan="11" Source="/Resource/3443eea4-acd4-4eff-bec0-fefa5b50ad36.jpg" Stretch="Fill"/>
+
+        <Button Grid.Row="1" FontSize="15"  Margin="50 10 50 10" Content="Добавить производителя" Name="AddManufacturerBtn" Click="AddManufacturerBtn_Click"/>
+
+        <Button Grid.Row="3" FontSize="15"  Margin="50 10 50 10" Content="Добавить товар" Name="AddProductBtn" Click="AddProductBtn_Click"/>
+
+        <Button Grid.Row="5" FontSize="15"  Margin="50 10 50 10" Content="Добавить сотрудника" Name="AddEmployeeBtn" Click="AddEmployeeBtn_Click"/>
+
+        <Button Grid.Row="7" FontSize="15"  Margin="50 10 50 10" Content="Ведение учета" Name="RecordsBtn" Click="RecordsBtn_Click"/>
+
+        <Button Grid.Row="9" FontSize="15"  Margin="50 10 50 10" Content="Отчет" Name="ReportBtn" Click="ReportBtn_Click"/>
+
+    </Grid>
+</Page>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Control7.Model;
 using System.Windows;
 
 namespace Control7
@@ -13,5 +8,6 @@ namespace Control7
     /// </summary>
     public partial class App : Application
     {
+        public static ControlEntities context = new ControlEntities();
     }
 }

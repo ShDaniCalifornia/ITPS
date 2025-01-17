@@ -1,0 +1,39 @@
+﻿<Page x:Class="Control8.View.Pages.AddGroupPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control8.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="800"
+      Title="AddGroupPages">
+
+    <Grid Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="88"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Text="Введите группу:" FontSize="25" VerticalAlignment="Center"/>
+
+        <TextBox Grid.Column="1" Grid.Row="1" Name="GroupTb"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Выберите специальность:" FontSize="25" VerticalAlignment="Center"/>
+
+        <ComboBox Grid.Column="1" Grid.Row="5" Name="GroupCmb"/>
+
+        <Button Grid.Column="1" Grid.Row="7" Content="Добавить" FontSize="25" Name="AddGroupBtn" Click="AddGroupBtn_Click"/>
+    </Grid>
+</Page>

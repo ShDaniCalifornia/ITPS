@@ -4,14 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2c11edfbf23f449a8038e00dba066199" Name="Diagram1">
-        <EntityTypeShape EntityType="ControlModel.Acounting" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ControlModel.Employee" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ControlModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ControlModel.Material" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <AssociationConnector Association="ControlModel.FK_Acounting_Employee" ManuallyRouted="false" />
-        <AssociationConnector Association="ControlModel.FK_Acounting_Material" ManuallyRouted="false" />
-        <AssociationConnector Association="ControlModel.FK_Material_Manufacturer" ManuallyRouted="false" />
+      <Diagram DiagramId="2c11edfbf23f449a8038e00dba066199" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="ControlModel.Acounting" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="ControlModel.Employee" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="ControlModel.Manufacturer" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="ControlModel.Material" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="ControlModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ControlModel.View_1" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="ControlModel.FK_Acounting_Employee" />
+        <AssociationConnector Association="ControlModel.FK_Acounting_Material" />
+        <AssociationConnector Association="ControlModel.FK_Material_Manufacturer" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -15,9 +15,9 @@ namespace Control8.View.Pages
         {
             InitializeComponent();
 
-            GroupCmb.SelectedValuePath = "ID";
-            GroupCmb.DisplayMemberPath = "Name";
-            GroupCmb.ItemsSource = App.context.Group.ToList();
+            SpecialCmb.SelectedValuePath = "ID";
+            SpecialCmb.DisplayMemberPath = "Name";
+            SpecialCmb.ItemsSource = App.context.Special.ToList();
         }
 
         private void AddGroupBtn_Click(object sender, RoutedEventArgs e)
@@ -26,7 +26,7 @@ namespace Control8.View.Pages
             if (string.IsNullOrEmpty(GroupTb.Text))
                 mes += "Введите группу\n";
 
-            if (string.IsNullOrEmpty(GroupCmb.Text))
+            if (string.IsNullOrEmpty(SpecialCmb.Text))
                 mes += "Выберите специальность\n";
 
             if (mes != "")
@@ -39,14 +39,14 @@ namespace Control8.View.Pages
             Group group = new Group()
             {
                 Name = GroupTb.Text,
-                Special = GroupCmb.SelectedItem as Special
+                Special = SpecialCmb.SelectedItem as Special
             };
             App.context.Group.Add(group);
             App.context.SaveChanges();
             MessageBox.Show("Группа добавлена");
 
             GroupTb.Text = "";
-            GroupCmb.Text = "";
+            SpecialCmb.Text = "";
         }
     }
 }

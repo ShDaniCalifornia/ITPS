@@ -69,6 +69,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppData\ClassFrame.cs" />
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\View_1.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\AddEmployeePages.xaml.cs">
       <DependentUpon>AddEmployeePages.xaml</DependentUpon>
     </Compile>

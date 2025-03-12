@@ -1,0 +1,17 @@
+﻿<Page x:Class="Control11.View.Pages.MenuPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control11.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="200"
+      Title="MenuPages">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="5" Grid.RowSpan="2" VerticalAlignment="Center">
+            <Button Content="Главная" Name="HomeBtn" Click="HomeBtn_Click" Margin="5"/>
+            <Button Content="Сдача макулатуры" Name="CollectionEntry" Click="CollectionEntry_Click" Margin="5"/>
+            <Button Content="Отчеты" Name="Report" Click="Report_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Page>

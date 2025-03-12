@@ -29,5 +29,7 @@ namespace Control7.Model
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<Manufacturer> Manufacturer { get; set; }
         public virtual DbSet<Material> Material { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<View_1> View_1 { get; set; }
     }
 }

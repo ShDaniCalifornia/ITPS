@@ -1,0 +1,34 @@
+﻿<Page x:Class="Control11.View.Pages.ReportPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control11.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="ReportPages">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Начальная дата:" VerticalAlignment="Center"/>
+            <DatePicker Name="StartDatePicker" VerticalAlignment="Center"/>
+            <Label Content="Конечная дата:" VerticalAlignment="Center"/>
+            <DatePicker Name="EndDatePicker" VerticalAlignment="Center"/>
+            <Button Content="Сформировать отчет" Name="GenerateReportBtn" Click="GenerateReportBtn_Click" Margin="5"/>
+        </StackPanel>
+
+        <DataGrid Name="ReportDG" Grid.Row="2" AutoGenerateColumns="True" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn>
+                    
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

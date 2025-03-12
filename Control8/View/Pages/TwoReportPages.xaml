@@ -9,6 +9,29 @@
       Title="TwoReportPages">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical" 
+                    Margin="50" 
+                    Width="525">
+            <Button Content="Поиск"
+                        Width="70"
+                        Name="PrintBtn"
+                        Click="PrintBtn_Click"/>
+            <DataGrid AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      CanUserDeleteRows="False"
+                      CanUserResizeRows="False"
+                      Name="GridJournal"
+                      HorizontalAlignment="Left"
+                      Height="500"
+                      Width="480"
+                      Margin="45">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Направление"
+                                        Binding="{Binding Activity.Direction.Name}" Width="200"/>
+                    <DataGridTextColumn Header="Баллы"
+                                        Binding="{Binding Mark}" Width="200"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>

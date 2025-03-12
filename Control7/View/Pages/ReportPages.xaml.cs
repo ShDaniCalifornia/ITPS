@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Control7.View.Pages
 {
@@ -23,6 +13,34 @@ namespace Control7.View.Pages
         public ReportPages()
         {
             InitializeComponent();
+        }
+
+        private void ReportBtn_Click(object sender, RoutedEventArgs e)
+        {
+            String mes = "";
+            if (string.IsNullOrEmpty(StartPic.Text))
+                mes += "Выберите начало периода\n";
+
+            if (string.IsNullOrEmpty(EndPic.Text))
+                mes += "Выберите конец периода\n";
+
+            if (mes != "")
+            {
+                MessageBox.Show(mes);
+                mes = "";
+                return;
+            }
+
+            var a = (DateTime)StartPic.SelectedDate;
+            var b = (DateTime)EndPic.SelectedDate;
+
+            var qwery = App.context.View_1
+                .Where(x => x.DateDelivery >= a && x.DateDelivery <= b)
+                .GroupBy(y => y.Name)
+                .Select(g => new { Сотрудник = g.Key, Сумма = g.Sum(s => s.Amount) })
+                .OrderBy(n => n.Сотрудник);
+
+            DataGr1.ItemsSource = qwery.ToList();
         }
     }
 }

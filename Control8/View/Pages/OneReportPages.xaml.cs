@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Control8.Class;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Control8.View.Pages
 {
@@ -23,6 +15,21 @@ namespace Control8.View.Pages
         public OneReportPages()
         {
             InitializeComponent();
+            CmbSpecial.SelectedValuePath = "ID";
+            CmbSpecial.DisplayMemberPath = "Name";
+            CmbSpecial.ItemsSource = App.context.Special.ToList();
+        }
+
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int Selected = Convert.ToInt32(CmbSpecial.SelectedValue);
+
+            DataGridInfo.ItemsSource = App.context.Group.Where(x => x.IdSpecial == Selected).ToList();
+        }
+
+        private void BallBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new View.Pages.TwoReportPages((sender as Button).DataContext as Group));
         }
     }
 }

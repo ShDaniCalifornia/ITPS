@@ -32,7 +32,7 @@
 
         <TextBlock Grid.Column="1" Grid.Row="3" Text="Выберите специальность:" FontSize="25" VerticalAlignment="Center"/>
 
-        <ComboBox Grid.Column="1" Grid.Row="5" Name="GroupCmb"/>
+        <ComboBox Grid.Column="1" Grid.Row="5" Name="SpecialCmb"/>
 
         <Button Grid.Column="1" Grid.Row="7" Content="Добавить" FontSize="25" Name="AddGroupBtn" Click="AddGroupBtn_Click"/>
     </Grid>

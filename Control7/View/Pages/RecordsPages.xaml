@@ -1,11 +1,11 @@
-﻿<Window x:Class="Control7.View.Pages.RecordsPages"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Control7.View.Pages"
-        mc:Ignorable="d"
-        d:DesignHeight="800" d:DesignWidth="1000" Title="RecordsPages">
+﻿<Page x:Class="Control7.View.Pages.RecordsPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Control7.View.Pages"
+      mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1000" Title="RecordsPages">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -40,8 +40,21 @@
         <ComboBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="20" Name="EmployeeCmb"/>
 
 
-        <DataGrid Margin="20" Grid.Row="4" Grid.ColumnSpan="4">
-            
+        <DataGrid Name="RecordsDG" Margin="20" Grid.Row="4" Grid.ColumnSpan="4" AutoGenerateColumns="False" Loaded="RecordsDG_Loaded" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата выдачи" Width="120"
+                    Binding="{Binding DateDelivery}"/>
+                <DataGridTextColumn Header="Товар" Width="180"
+                    Binding="{Binding Material.Name}"/>
+                <DataGridTextColumn Header="Производитель" Width="180"
+                    Binding="{Binding Manufacturer.Name}"/>
+                <DataGridTextColumn Header="Цена" Width="120"
+                    Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Количество" Width="120"
+                    Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Сумма" Width="120"
+                    Binding="{Binding Amount}"/>
+            </DataGrid.Columns>
         </DataGrid>
 
         <TextBlock Grid.Row="5" Grid.Column="2" Text="Всего записей" FontSize="20" Margin="20 30 0 0" VerticalAlignment="Bottom" FontWeight="ExtraBold" HorizontalAlignment="Right"/>
@@ -51,8 +64,8 @@
         <TextBlock Grid.Row="6" Grid.Column="2" Text="Общая сумма" FontSize="20" Margin="20 30 0 0" VerticalAlignment="Bottom" FontWeight="ExtraBold" HorizontalAlignment="Right"/>
 
         <TextBox Grid.Column="3" Grid.Row="6" Margin="30 30 30 0" Name="SumTb"/>
-        
-        
+
+
         <Button Grid.Row="6"  Margin="40 10 40 10" Name="AddEmployeeBtn" Content="Добавить" FontSize="20" Click="AddEmployeeBtn_Click"/>
     </Grid>
-</Window>
+</Page>

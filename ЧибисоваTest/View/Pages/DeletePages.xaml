@@ -41,8 +41,7 @@
         </DataGrid>
 
         <Button Grid.Row="5" Grid.Column="1" Content="Удалить студента" Margin="10" FontSize="20" Name="DeleteBtn" Click="DeleteBtn_Click"/>
-        
+
         <Button Grid.Row="5" Grid.Column="3" Content="Назад" Margin="10" FontSize="20" Name="ExitBtn" Click="ExitBtn_Click"/>
- <!-- -->
     </Grid>
 </Page>

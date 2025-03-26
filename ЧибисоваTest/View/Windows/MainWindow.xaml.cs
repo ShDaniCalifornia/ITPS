@@ -12,8 +12,11 @@ namespace ЧибисоваTest
         {
             InitializeComponent();
 
-            ClassFrame.FrameLogo.Navigate(new View.Pages.LogoPages());
-            ClassFrame.FrameBody.Navigate(new View.Pages.MainPages());
+            ClassFrame.FrameLogo = FrameLogo;
+            FrameLogo.Navigate(new View.Pages.LogoPages());
+
+            ClassFrame.FrameBody = FrameBody;
+            FrameBody.Navigate(new View.Pages.MainPages());
         }
     }
 }

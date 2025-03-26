@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using ЧибисоваTest.Classes;
+using ЧибисоваTest.View.Windows;
 
 namespace ЧибисоваTest.View.Pages
 {
@@ -21,7 +22,8 @@ namespace ЧибисоваTest.View.Pages
 
         private void StudentBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            TestWindow testWindow = new TestWindow();
+            testWindow.Show();
         }
     }
 }

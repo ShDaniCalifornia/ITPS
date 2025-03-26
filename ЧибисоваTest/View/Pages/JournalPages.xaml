@@ -34,16 +34,21 @@
                    Text="Выберите группу" FontSize="20"
                    VerticalAlignment="Center"/>
 
-        <ComboBox Grid.Row="1" Grid.Column="3" Margin="10"/>
+        <ComboBox Name="GroupCmb" Grid.Row="1" Grid.Column="3" Margin="10" SelectionChanged="GroupCmb_SelectionChanged"/>
 
         <TextBlock Grid.Row="1" Grid.Column="5"
                    Text="Выберите студента" FontSize="20"
                    VerticalAlignment="Center"/>
 
-        <ComboBox Grid.Row="1" Grid.Column="7" Margin="10"/>
+        <ComboBox Name="StudentCmb" Grid.Row="1" Grid.Column="7" Margin="10" SelectionChanged="StudentCmb_SelectionChanged"/>
 
-        <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="7">
-            
+        <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="7" Name="JournalDG" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Width="150" Binding="{Binding DateTest, StringFormat=dd.MM.yyy}"/>
+                <DataGridTextColumn Header="ФИО" Width="250" Binding="{Binding Student.Name}"/>
+                <DataGridTextColumn Header="Тест" Width="300" Binding="{Binding Test.Name}"/>
+                <DataGridTextColumn Header="Оценка" Width="70" Binding="{Binding Mark}"/>
+            </DataGrid.Columns>
         </DataGrid>
 
         <Button Grid.Row="5" Grid.Column="1" Content="Назад" Margin="10" FontSize="20" Name="ExitBtn" Click="ExitBtn_Click"/>

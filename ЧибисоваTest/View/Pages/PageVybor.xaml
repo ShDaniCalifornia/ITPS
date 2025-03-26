@@ -1,0 +1,24 @@
+﻿<Page x:Class="ЧибисоваTest.View.Pages.PageVybor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ЧибисоваTest.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="1200"
+      Title="PageVybor">
+
+    <Grid>
+        <StackPanel x:Name="StackPanel1" Orientation="Vertical" Margin="250 50 250 50">
+            <TextBlock Text="Выберите группу" FontSize="30"/>
+            <ComboBox Name="GroupCmb" FontWeight="Bold" FontSize="30" SelectionChanged="GroupCmb_SelectionChanged"/>
+            <TextBlock Text="Выберите студента" FontSize="30"/>
+            <ComboBox Name="StudentCmb" FontWeight="Bold" FontSize="30"/>
+            <TextBlock Text="Выберите тест" FontSize="30"/>
+            <ComboBox Name="TestCmb" FontWeight="Bold" FontSize="30"/>
+            <Button Content="Начать" Name="StartBtn" FontSize="30" FontWeight="Bold" Margin="10 50 10 10" Click="StartBtn_Click"/>
+
+
+        </StackPanel>
+    </Grid>
+</Page>

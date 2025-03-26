@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using ЧибисоваTest.Model;
 
 namespace ЧибисоваTest
 {
@@ -7,6 +8,6 @@ namespace ЧибисоваTest
     /// </summary>
     public partial class App : Application
     {
-
+        public static ЧибисоваTestEntities context = new ЧибисоваTestEntities();
     }
 }

@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\Windows\TestWindow.xaml.cs">
+      <DependentUpon>TestWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\Pages\AddGroupPages.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +99,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Pages\PageTest1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\PageTest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\PageTest3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\PageTest4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\PageVybor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +128,34 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\ClassFrame.cs" />
+    <Compile Include="Classes\ClassVariable.cs" />
+    <Compile Include="Model\Group.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Journal.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelTest.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTest.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelTest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ModelTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTest.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Student.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Test.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\AddGroupPages.xaml.cs">
       <DependentUpon>AddGroupPages.xaml</DependentUpon>
     </Compile>
@@ -120,10 +180,29 @@
     <Compile Include="View\Pages\MainPages.xaml.cs">
       <DependentUpon>MainPages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\PageTest1.xaml.cs">
+      <DependentUpon>PageTest1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\PageTest2.xaml.cs">
+      <DependentUpon>PageTest2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\PageTest3.xaml.cs">
+      <DependentUpon>PageTest3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\PageTest4.xaml.cs">
+      <DependentUpon>PageTest4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\PageVybor.xaml.cs">
+      <DependentUpon>PageVybor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Windows\TestWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -143,6 +222,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\ModelTest.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTest.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ModelTest.edmx.diagram">
+      <DependentUpon>ModelTest.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,7 +242,19 @@
     <Resource Include="Recourses\Шеврон.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Content Include="Model\ModelTest.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTest.edmx</DependentUpon>
+      <LastGenOutput>ModelTest.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ModelTest.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTest.edmx</DependentUpon>
+      <LastGenOutput>ModelTest.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
